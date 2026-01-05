@@ -2,6 +2,14 @@
 [![pipeline status](https://gitlab.com/nvidia/kubernetes/gpu-operator/badges/master/pipeline.svg)](https://gitlab.com/nvidia/kubernetes/gpu-operator/-/pipelines)
 [![coverage report](https://gitlab.com/nvidia/kubernetes/gpu-operator/badges/master/coverage.svg)](https://gitlab.com/nvidia/kubernetes/gpu-operator/-/pipelines)
 
+# Build image
+run sudo make build-image
+
+# what's changed
+operator validator with gpu
+</br>
+fptcloud MPS custom label
+</br>
 # NVIDIA GPU Operator
 
 ![nvidia-gpu-operator](https://www.nvidia.com/content/dam/en-zz/Solutions/Data-Center/egx/nvidia-egx-platform-gold-image-full-2c50-d@2x.jpg)

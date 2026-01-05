@@ -209,7 +209,7 @@ lint:
 
 BUILD_FLAGS = -ldflags "-s -w -X $(VERSION_PKG).gitCommit=$(GIT_COMMIT) -X $(VERSION_PKG).version=$(VERSION)"
 build:
-	go build $(BUILD_FLAGS) ./...
+	go build -buildvcs=false $(BUILD_FLAGS) ./...
 
 cmds: $(CMD_TARGETS)
 $(CMD_TARGETS): cmd-%:
@@ -292,6 +292,7 @@ build-image:
 		--build-arg VERSION="$(VERSION)" \
 		--build-arg BUILDER_IMAGE="$(BUILDER_IMAGE)" \
 		--build-arg GOLANG_VERSION="$(GOLANG_VERSION)" \
+		--network=host \
 		--build-arg GIT_COMMIT="$(GIT_COMMIT)" \
 		--build-arg GOPROXY="$(GOPROXY)" \
 		--file $(DOCKERFILE) $(CURDIR)

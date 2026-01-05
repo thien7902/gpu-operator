@@ -18,7 +18,7 @@ spec:
     spec:
       nodeSelector:
         nvidia.com/gpu.deploy.device-plugin: "true"
-        nvidia.com/mps.capable: "true"
+        fptcloud.com/mps.capable: "true"
       tolerations:
         - key: nvidia.com/gpu
           operator: Exists
